@@ -31,7 +31,7 @@ import net.mamoe.mirai.console.util.ConsoleExperimentalApi
  */
 object SeaOperation : CompositeCommand(
     MiraiConsoleDriftBottle,
-    primaryName = "sea",
+    primaryName = "plp",
     secondaryNames = CommandConfig.seaOperation,
     description = "漂流瓶操作复合指令"
 ) {
@@ -82,13 +82,13 @@ object SeaOperation : CompositeCommand(
         }
     }
 
+
+
     @SubCommand("status")
     suspend fun CommandSender.status() {
         sendMessage(
             """
-            目前海中物品总数: ${Sea.contents.size}
-            其中漂流瓶数为: ${Sea.contents.count { it.type == Item.Type.BOTTLE }}
-            尸体数为: ${Sea.contents.count { it.type == Item.Type.BODY }}
+            海里有 ${Sea.contents.size} 个漂流瓶
             """.trimIndent()
         )
     }
