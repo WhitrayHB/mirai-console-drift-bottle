@@ -88,7 +88,7 @@ object SeaOperation : CompositeCommand(
     suspend fun CommandSender.status() {
         sendMessage(
             """
-            海里有 ${Sea.contents.size} 个漂流瓶
+            海里有${Sea.contents.size}个漂流瓶
             """.trimIndent()
         )
     }
